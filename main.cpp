@@ -1,5 +1,5 @@
 #include <iostream>
+#include "vec.h"
 
 int main() {
-	std::cout << "Flare3D!\n";
 }
