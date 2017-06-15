@@ -41,11 +41,12 @@ inline vec operator*(const vec &p_a, const double &p_b) {
 }
 
 inline vec operator*(const double &p_a, const vec &p_b) {
-  return p_b * p_a;
+  return vec(p_b.x * p_a, p_b.y * p_a, p_b.z * p_a);
 }
 
 inline vec operator/(const vec &p_a, const double &p_b) {
-  return p_a * (1 / p_b);
+  double z = 1 / p_b;
+  return vec(p_a.x * z, p_a.y * z, p_a.z * z);
 }
 
 inline double operator*(const vec &p_a, const vec &p_b) {
