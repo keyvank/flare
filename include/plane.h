@@ -19,7 +19,8 @@ public:
   plane(plane &&) = default;
   plane &operator=(const plane &) = default;
   plane &operator=(plane &&) = default;
-  
+  ~plane() = default;
+
   plane(const vec &p_pos, const vec &p_norm);
 };
 

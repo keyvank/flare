@@ -14,6 +14,7 @@ public:
   obj(obj &&) = default;
   obj &operator=(const obj &) = default;
   obj &operator=(obj &&) = default;
+  virtual ~obj() = default;
 };
 
 #endif

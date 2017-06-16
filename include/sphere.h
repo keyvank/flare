@@ -19,6 +19,7 @@ public:
   sphere(sphere &&) = default;
   sphere &operator=(const sphere &) = default;
   sphere &operator=(sphere &&) = default;
+  ~sphere() = default;
 
   sphere(const vec &p_pos, const double &p_radius);
 };
