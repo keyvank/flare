@@ -21,11 +21,12 @@ public:
   double z;
 
   vec();
-  vec(const vec &p_vec) = default;
-  vec(vec &&p_vec) = default;
-  vec &operator=(const vec &p_vec) = default;
-  vec &operator=(vec &&p_vec) = default;
+  vec(const vec &) = default;
+  vec(vec &&) = default;
+  vec &operator=(const vec &) = default;
+  vec &operator=(vec &&) = default;
   ~vec() = default;
+  
   vec(const double &p_x, const double &p_y, const double &p_z);
   vec(const double &p_v);
 };

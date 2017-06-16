@@ -9,11 +9,12 @@ public:
   vec d;
 
   ray() = delete;
-  ray(const ray &p_ray) = default;
-  ray(ray &&p_ray) = default;
-  ray &operator=(const ray &p_ray) = default;
-  ray &operator=(ray &&p_ray) = default;
+  ray(const ray &) = default;
+  ray(ray &&) = default;
+  ray &operator=(const ray &) = default;
+  ray &operator=(ray &&) = default;
   ~ray() = default;
+
   ray(const vec &p_o, const vec &p_d);
 };
 
