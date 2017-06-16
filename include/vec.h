@@ -11,7 +11,9 @@ class vec final {
   friend inline vec operator/(const vec &, const double &);
 
   friend inline double operator*(const vec &, const vec &); // Dot product
-  friend inline vec operator^(const vec &, const vec &); // Cross product
+  friend inline vec operator%(const vec &, const vec &); // Cross product
+
+  friend inline vec operator^(const vec &, const vec &); // Memberwise product
 
 public:
   double x;
@@ -53,10 +55,14 @@ inline double operator*(const vec &p_a, const vec &p_b) {
   return p_a.x * p_b.x + p_a.y * p_b.y + p_a.z * p_b.z;
 }
 
-inline vec operator^(const vec &p_a, const vec &p_b) {
+inline vec operator%(const vec &p_a, const vec &p_b) {
   return vec(p_a.y * p_b.z - p_a.z * p_b.y,
     p_a.z * p_b.x - p_a.x * p_b.z,
     p_a.x * p_b.y - p_a.y * p_b.x);
+}
+
+inline vec operator^(const vec &p_a, const vec &p_b) {
+  return vec(p_a.x * p_b.x, p_a.y * p_b.y, p_a.z * p_b.z);
 }
 
 #endif
