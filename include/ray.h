@@ -1,6 +1,8 @@
 #ifndef __RAY__
 #define __RAY__
+
 #include <iostream>
+#include "vec.h"
 
 class ray final {
   friend std::ostream &operator<<(std::ostream &, const ray &);
