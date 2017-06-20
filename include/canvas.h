@@ -27,9 +27,13 @@ public:
   canvas(const unsigned int &p_width, const unsigned int &p_height);
 
   inline pixel * operator[](unsigned int);
+  inline pixel const * operator[](unsigned int) const;
 };
 
 inline pixel * canvas::operator[](unsigned int p_index) {
+  return pixels[p_index];
+}
+inline pixel const * canvas::operator[](unsigned int p_index) const {
   return pixels[p_index];
 }
 
