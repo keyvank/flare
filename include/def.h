@@ -3,6 +3,8 @@
 
 #define EPSILON (0.000000001d)
 
+#define PI_OVER_4 (0.78539816339d)
+
 // Colors
 const vec BLACK(0,0,0);
 const vec WHITE(1,1,1);
