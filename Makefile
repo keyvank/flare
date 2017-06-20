@@ -4,3 +4,4 @@ all:
 clean:
 	rm -rf flare
 	rm -rf *.o
+	rm -rf output.ppm
